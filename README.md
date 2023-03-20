@@ -36,6 +36,7 @@ This is an Arduino Nano 3-digit 7-segment thermostat design with Kicad schematic
 |SW1,        |1   |RotaryEncoder|RotaryEncoder_Switch|Rotary_Encoder:RotaryEncoder_and_Switch_Vertical|Rotary encoder, dual channel, incremental quadrate outputs, with switch                        |
 |U1,         |1   |MAX6675|MAX6675     |Package_SO:SOIC-8_3.9x4.9mm_P1.27mm|Cold Junction K-type Termocouple Interface, SPI, SO8                                           |
 |U3,         |1   |LTD040BUE-101A|LTD040BUE-101A      |Display3bit:LTD040BUE-101A     |3 digit 7 segment super bright red LED, common anode                                           |
+<img alt="Schematic" src="https://github.com/devincentiis/thermostatino/blob/main/schema.jpg?raw=true" width="100%">
 
 <img alt="Thermostatino Bottom" src="https://github.com/devincentiis/thermostatino/blob/main/ThermostatinoBottom.jpg?raw=true" width="100%">
 
