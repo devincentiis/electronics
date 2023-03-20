@@ -9,6 +9,14 @@ This is an Arduino Nano 3-digit 7-segment thermostat design with Kicad schematic
 * Set timer: rotate encoder 
 * Select type of output combine out1, out2 and fan: push 
 
+### Firmware library for [Arduino IDE 1.8.19](https://github.com/arduino/Arduino) 
+
+* SevSeg 3.7.0 by Dean Reading [Github Project Page](https://github.com/DeanIsMe/SevSeg/)
+* Simple Rotary 1.1.3 by MPrograms [Github Project Page](https://github.com/mprograms/SimpleRotary/)
+* MAX6675 1.1.0 by Adafruit [Github Project Page](https://github.com/adafruit/MAX6675-library/)
+
+
+
 <img alt="Thermostatino Top" src="https://github.com/devincentiis/thermostatino/blob/main/ThermostatinoTop.jpg?raw=true" width="100%">
 
 
@@ -31,3 +39,28 @@ This is an Arduino Nano 3-digit 7-segment thermostat design with Kicad schematic
 
 <img alt="Thermostatino Bottom" src="https://github.com/devincentiis/thermostatino/blob/main/ThermostatinoBottom.jpg?raw=true" width="100%">
 
+## License
+
+MIT License
+
+Copyright (c) 2023 - Antonio de Vincentiis
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+[1]: https://github.com/DeanIsMe/SevSeg
