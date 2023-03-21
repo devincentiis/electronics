@@ -5,8 +5,8 @@ This is an Arduino Nano 3-digit 7-segment thermostat design with Kicad schematic
 ### Use instructions
 
 * Select type of output combine UP, DOWN and FAN: push 3 seconds enconder switch
-* Set the temperature: turn the potentiometer (while viewing the set value)
-* Set th timer: turn the encoder (while viewing the set value)
+* Set temperature: turn the potentiometer (while viewing the set value)
+* Set timer: turn the encoder (while viewing the set value)
 * When timer turn to zero: OFF all 
 * Without moving any knobs: display temperature
 
