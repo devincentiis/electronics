@@ -4,10 +4,11 @@ This is an Arduino Nano 3-digit 7-segment thermostat design with Kicad schematic
 
 ### Use instructions
 
-* ON-OFF: push 3 seconds enconder switch
-* Set temperature: rotate potentiometer
-* Set timer: rotate encoder 
-* Select type of output combine out1, out2 and fan: push 
+* Select type of output combine UP, DOWN and FAN: push 3 seconds enconder switch
+* Set the temperature: turn the potentiometer (while viewing the set value)
+* Set th timer: turn the encoder (while viewing the set value)
+* When timer turn to zero: OFF all 
+* Without moving any knobs: display temperature
 
 ### Firmware library for [Arduino IDE 1.8.19](https://github.com/arduino/Arduino) 
 
@@ -36,9 +37,14 @@ This is an Arduino Nano 3-digit 7-segment thermostat design with Kicad schematic
 |SW1,        |1   |RotaryEncoder|RotaryEncoder_Switch|Rotary_Encoder:RotaryEncoder_and_Switch_Vertical|Rotary encoder, dual channel, incremental quadrate outputs, with switch                        |
 |U1,         |1   |MAX6675|MAX6675     |Package_SO:SOIC-8_3.9x4.9mm_P1.27mm|Cold Junction K-type Termocouple Interface, SPI, SO8                                           |
 |U3,         |1   |LTD040BUE-101A|LTD040BUE-101A      |Display3bit:LTD040BUE-101A     |3 digit 7 segment super bright red LED, common anode                                           |
+
 <img alt="Schematic" src="https://github.com/devincentiis/thermostatino/blob/main/schema.jpg?raw=true" width="100%">
 
+
 <img alt="Thermostatino Bottom" src="https://github.com/devincentiis/thermostatino/blob/main/ThermostatinoBottom.jpg?raw=true" width="100%">
+
+### Youtube video (old prototype)
+This video is related to the [first version (prototype) of the "Thermostatino" PCB](https://youtu.be/hwenW8Aa0GM)
 
 ## License
 
@@ -64,4 +70,4 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
-[1]: https://github.com/DeanIsMe/SevSeg
+
