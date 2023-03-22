@@ -10,6 +10,8 @@ This is an Arduino Nano 3-digit 7-segment thermostat design with Kicad schematic
 * When timer turn to zero: OFF all 
 * Without moving any knobs: display temperature
 
+### Schematic and PCB EAD [KiCad 7](https://www.kicad.org/blog/2023/02/Version-7.0.0-Released) 
+
 ### Firmware library for [Arduino IDE 1.8.19](https://github.com/arduino/Arduino) 
 
 * SevSeg 3.7.0 by Dean Reading [Github Project Page](https://github.com/DeanIsMe/SevSeg/)
