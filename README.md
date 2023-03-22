@@ -45,8 +45,8 @@ This is an Arduino Nano 3-digit 7-segment thermostat design with Kicad schematic
 
 <img alt="Thermostatino Bottom" src="https://github.com/devincentiis/thermostatino/blob/main/ThermostatinoBottom.jpg?raw=true" width="100%">
 
-### Youtube video (old prototype)
-This video is related to the [first version (prototype) of the "Thermostatino" PCB](https://youtu.be/hwenW8Aa0GM)
+### Video (old prototype)
+[![Thermostatino for Arduino Nano](http://img.youtube.com/vi/hwenW8Aa0GM/0.jpg)](http://www.youtube.com/watch?v=hwenW8Aa0GM "Thermostatino for Arduino Nano")
 
 ## License
 
