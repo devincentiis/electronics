@@ -856,7 +856,7 @@
     (property "Sheetname" "")
     (path "/3584b50b-2368-4d73-a5e3-a07878aca66d")
     (attr through_hole)
-    (fp_text reference "U3" (at 0 -0.5 unlocked) (layer "F.SilkS")
+    (fp_text reference "U3" (at -5.545 -0.93 unlocked) (layer "F.SilkS")
         (effects (font (size 1 1) (thickness 0.15)))
       (tstamp 8ba36038-6b1b-45b9-bba9-5e6afcdcfcd2)
     )
@@ -910,9 +910,9 @@
       (net 9 "Net-(A1-Pad9)") (pinfunction "a") (pintype "input") (tstamp cece0dbd-534e-47df-a35d-6a324ddea04b))
     (pad "12" thru_hole circle (at 0 -12.7) (size 1.524 1.524) (drill 0.762) (layers "*.Cu" "*.Mask")
       (net 40 "Net-(R6-Pad1)") (pinfunction "CA1") (pintype "input") (tstamp 4c7c526c-3543-42b4-a004-2d6433b6635f))
-    (model "${KICAD6_3DMODEL_DIR}/Display_7Segment.3dshapes/bc56-12.wrl"
+    (model "${KIPRJMOD}/Display3bit.pretty/3dig7seg.wrl"
       (offset (xyz 6.5 6.5 0))
-      (scale (xyz 0.4 0.333 0.4))
+      (scale (xyz 0.4 0.33 0.3))
       (rotate (xyz 0 0 0))
     )
   )
