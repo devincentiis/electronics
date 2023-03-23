@@ -1,4 +1,4 @@
-# 3 Digit 7 Segments Arduino Nano Thermostat 
+# 3 Digit 7 Segment thermostat with K type thermocouple for Arduino Nano 
 
 This is an Arduino Nano 3-digit 7-segment thermostat design with Kicad schematic diagram and PCB.
 
