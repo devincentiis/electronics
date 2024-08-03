@@ -11,7 +11,7 @@ The firmware you find does not have the PID, you can have fun adding it accordin
 * When timer turn to zero: OFF all 
 * Without moving any knobs: display temperature
 
-### Schematic and PCB EDA [KiCad 7](https://www.kicad.org/blog/2023/02/Version-7.0.0-Released) 
+### Schematic and PCB EDA [KiCad](https://www.kicad.org/download/) 
 
 ### Firmware library for [Arduino IDE 1.8.19](https://github.com/arduino/Arduino) 
 
