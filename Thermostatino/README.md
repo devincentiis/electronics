@@ -21,7 +21,7 @@ The firmware you find does not have the PID, you can have fun adding it accordin
 
 
 
-<img alt="Thermostatino Top" src="https://github.com/devincentiis/thermostatino/blob/main/ThermostatinoTop.jpg?raw=true" width="100%">
+<img alt="Thermostatino Top" src="https://github.com/devincentiis/electronics/blob/main/Thermostatino/ThermostatinoTop.jpg?raw=true" width="100%">
 
 
 |Ref         |Qnty|Value|Cmp name         |Footprint                      |Description                                                                                    |
@@ -41,10 +41,10 @@ The firmware you find does not have the PID, you can have fun adding it accordin
 |U1,         |1   |MAX6675|MAX6675     |Package_SO:SOIC-8_3.9x4.9mm_P1.27mm|Cold Junction K-type Termocouple Interface, SPI, SO8                                           |
 |U3,         |1   |LTD040BUE-101A|LTD040BUE-101A      |Display3bit:LTD040BUE-101A     |3 digit 7 segment super bright red LED, common anode                                           |
 
-<img alt="Schematic" src="https://github.com/devincentiis/thermostatino/blob/main/schema.jpg?raw=true" width="100%">
+<img alt="Schematic" src="https://github.com/devincentiis/electronics/blob/main/Thermostatino/schema.jpg?raw=true" width="100%">
 
 
-<img alt="Thermostatino Bottom" src="https://github.com/devincentiis/thermostatino/blob/main/ThermostatinoBottom.jpg?raw=true" width="100%">
+<img alt="Thermostatino Bottom" src="https://github.com/devincentiis/electronics/blob/main/Thermostatino/ThermostatinoBottom.jpg?raw=true" width="100%">
 
 ### Video (old prototype)
 [![Thermostatino for Arduino Nano](http://img.youtube.com/vi/hwenW8Aa0GM/0.jpg)](http://www.youtube.com/watch?v=hwenW8Aa0GM "Thermostatino for Arduino Nano")
