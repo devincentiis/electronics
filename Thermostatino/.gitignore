@@ -3,4 +3,4 @@ ThermoSevSeg.csv
 ThermoSevSeg.xml
 ThermoSevSeg-backups/
 fp-info-cache
-.kicad_prl
+*.kicad_prl
