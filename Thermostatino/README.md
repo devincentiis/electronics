@@ -21,7 +21,7 @@ The firmware you find does not have the PID, you can have fun adding it accordin
 
 
 
-<img alt="Thermostatino Top" src="https://github.com/devincentiis/electronics/blob/main/Thermostatino/ThermostatinoTop.jpg?raw=true" width="100%">
+[<img alt="Thermostatino Top" src="https://github.com/devincentiis/electronics/blob/main/Thermostatino/ThermostatinoTop.jpg?raw=true" width="100%">](https://github.com/devincentiis/electronics/blob/main/Thermostatino/ThermostatinoTop.jpg)
 
 
 |Ref         |Qnty|Value|Cmp name         |Footprint                      |Description                                                                                    |
