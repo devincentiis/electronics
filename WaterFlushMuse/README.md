@@ -10,7 +10,7 @@ The low battery warning is performed with a single beep and a flash at each disc
 
 MIT License
 
-Copyright (c) 2023 - Antonio de Vincentiis
+Copyright (c) 2023 to present - Antonio de Vincentiis
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
