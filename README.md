@@ -10,6 +10,11 @@ ATtiny412 water waste tank alarm
 
 [<img alt="WaterFlushMuse" src="https://github.com/devincentiis/electronics/blob/main/WaterFlushMuse/render.png?raw=true" width="50%">](https://github.com/devincentiis/electronics/blob/main/WaterFlushMuse/)
 
+### [DeVincentiis Linear Power Supply](https://github.com/devincentiis/electronics/blob/main/DeVincentiisLinearPSU) 
+Digitally controlled linear power supply
+
+[<img alt="DeVincentiisLinearPS" src="https://github.com/devincentiis/electronics/blob/main/DeVincentiisLinearPSU/render.png?raw=true" width="50%">](https://github.com/devincentiis/electronics/blob/main/DeVincentiisLinearPSU/)
+
 ## License
 
 MIT License
