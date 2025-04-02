@@ -1,7 +1,7 @@
 /*
 Digital Linear Power Supply by ADVisor Antonio De Vincentiis - Pescara - Italy 
 https://github.com/devincentiis
-version 20240707
+version 20250402
 */
 #include "avr/io.h"
 #include "util/delay.h"
@@ -27,18 +27,19 @@ unsigned long timer_decisec = millis();
 // ROTARY ENCODE
 SimpleRotary rotary(ROT_A, ROT_B, ROT_S);
 
-int rnetTransfoVoltage;
-int max_voltage = 240;
-int max_current = 150; // max current is 250 (250*20mA) = 5A 
-int middle_voltage = 10;
 
-int voltage_set = 0;
-int rnetOutVoltage;
-int printRealVoltage;
-int current_set = 0;
-int opampCurrent = 1023; 
-int biasCurrent = 0;
-int printRealCurrent;
+uint16_t rnetTransfoVoltage;
+uint16_t max_voltage = 240;
+uint16_t max_current = 150; // max current is 250 (250*20mA) = 5A 
+uint16_t middle_voltage = 10;
+
+uint16_t voltage_set = 0;
+uint16_t rnetOutVoltage;
+uint16_t printRealVoltage;
+uint16_t current_set = 0;
+uint16_t opampCurrent = 1023; 
+uint16_t biasCurrent = 0;
+uint16_t printRealCurrent;
 int voltampere_set = 0;
 int mode_set = 0; // 0 = set voltage, 1 = set current;
 
@@ -146,9 +147,9 @@ void setup() {
   lcd.createChar(0, charRight);
   lcd.clear();
   lcd.setCursor(0, 0);
-  lcd.print("Welcome to ");
+  lcd.print(" De Vincentiis");
   lcd.setCursor(0, 1);
-  lcd.print("ADVe231 LinearPS");
+  lcd.print("   Linear PS");
   delay(1000);  
   // first check if exist middle tap of transformer
   digitalWrite(CAP_DISCHARGE,HIGH); // start discharge smoothing capacitors
