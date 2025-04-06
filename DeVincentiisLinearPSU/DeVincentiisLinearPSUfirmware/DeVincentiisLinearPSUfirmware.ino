@@ -147,7 +147,7 @@ void setup() {
   lcd.createChar(0, charRight);
   lcd.clear();
   lcd.setCursor(0, 0);
-  lcd.print(" De Vincentiis");
+  lcd.print("    Digital");
   lcd.setCursor(0, 1);
   lcd.print("   Linear PS");
   delay(1000);  
@@ -273,7 +273,7 @@ void loop() {
     opampCurrent = analogRead(A_READ);
     // map it to the range of the analog out:
     printRealVoltage = map(rnetOutVoltage, 0, 1023, 0, 348);
-    if (printRealVoltage >= middle_voltage){
+    if (printRealVoltage >= middle_voltage || middle_voltage < 50){
       digitalWrite(RELAY12_24, LOW);   
     } else {
       if (shutdown_detect >=1 && shutdown_status == 0){ // relay energized only if no shutdown
@@ -328,9 +328,9 @@ void loop() {
         writeIntIntoEEPROM(1, current_set);      
         lcd.clear();
         lcd.setCursor(0, 0);
-        lcd.print("Goodbye from");
+        lcd.print("    Goodbye");
         lcd.setCursor(0, 1);
-        lcd.print("AVDe231 LinearPS");
+        lcd.print("  enthusiast!");
         shutdown_status = 1;
       }
     }
