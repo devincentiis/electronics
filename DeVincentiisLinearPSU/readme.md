@@ -41,7 +41,8 @@ The presence of the I2C plug allows many expansions, for example by moving the L
 | C14                                        | 1   | 10u 50V                                                                           | Capacitor_THT:CP_Radial_D5.0mm_P2.50mm        | &nbsp; |
 | C15                              | 1   | 330p                                                                              | Capacitor_SMD:C_1206                          | &nbsp; |
 | C17                                        | 1   | 1000u 10V                                                                         | Capacitor_THT:CP_Radial_D8.0mm_P3.50mm        | &nbsp; |
-| C18                                   | 1   | 470p                                                                              | Capacitor_SMD:C_1206                          | &nbsp; |
+| C18                                   | 1   | 10n                                                                              | Capacitor_SMD:C_1206                          | &nbsp; |
+| C19                                   | 1   | 1n                                                                              | Capacitor_SMD:C_1206                          | &nbsp; |
 | C25                                        | 1   | 47u 35V                                                                           | Capacitor_THT:CP_Radial_D6.3mm_P2.50mm        | &nbsp; |
 | C26                                        | 1   | 470u 63V                                                                          | Capacitor_THT:CP_Radial_D12.5mm_P5.00mm       | &nbsp; |
 | D1, D3, D6, D8, D12                        | 5   | 1N4148                                                                            | Diode_SMD                                     | &nbsp; |
@@ -84,7 +85,7 @@ The presence of the I2C plug allows many expansions, for example by moving the L
 | R12                                        | 1   | 0.47                                                                              | Resistor_THT: L25.0mm_W9.0mm_P27.94mm         | &nbsp; |
 | R16                                        | 1   | 2200                                                                              | Resistor_SMD:R_1206                           | &nbsp; |
 | R20, R23                                   | 2   | 22K                                                                               | Resistor_SMD:R_1206                           | &nbsp; |
-| R19, R43, R44, R50                         | 4   | 1000                                                                              | Resistor_SMD:R_1206                           | &nbsp; |
+| R19, R43, R44, R50, R51                    | 5   | 1000                                                                              | Resistor_SMD:R_1206                           | &nbsp; |
 | R24, R25, R26, R27, R37                    | 5   | 2700                                                                              | Resistor_SMD:R_1206                           | &nbsp; |
 | R28                                        | 1   | 47K                                                                               | Resistor_SMD:R_1206                           | &nbsp; |
 | R29, R30                                   | 2   | 0.22                                                                              | Resistor_THT: L14.3mm_D5.7mm_P20.32mm         | &nbsp; |
