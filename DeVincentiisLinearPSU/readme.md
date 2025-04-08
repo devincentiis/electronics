@@ -39,7 +39,7 @@ The presence of the I2C plug allows many expansions, for example by moving the L
 | C8                                         | 1   | 47u 16V                                                                           | Capacitor_THT:CP_Radial_D5.0mm_P2.50mm        | &nbsp; |
 | C9                                         | 1   | 1000u 35V                                                                         | Capacitor_THT:CP_Radial_D12.5mm_P5.00mm       | &nbsp; |
 | C14                                        | 1   | 10u 50V                                                                           | Capacitor_THT:CP_Radial_D5.0mm_P2.50mm        | &nbsp; |
-| C15                              | 1   | 330p                                                                              | Capacitor_SMD:C_1206                          | &nbsp; |
+| C15, C22                              | 2   | 330p                                                                              | Capacitor_SMD:C_1206                          | &nbsp; |
 | C17                                        | 1   | 1000u 10V                                                                         | Capacitor_THT:CP_Radial_D8.0mm_P3.50mm        | &nbsp; |
 | C18                                   | 1   | 10n                                                                              | Capacitor_SMD:C_1206                          | &nbsp; |
 | C25                                        | 1   | 47u 35V                                                                           | Capacitor_THT:CP_Radial_D6.3mm_P2.50mm        | &nbsp; |

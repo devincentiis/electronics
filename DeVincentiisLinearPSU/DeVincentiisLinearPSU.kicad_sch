@@ -5,12 +5,12 @@
 	(uuid "5991d8a9-f3ca-4c4e-8c49-9a8e36fd874b")
 	(paper "A3")
 	(title_block
-		(title "DeVincentiisDigitalLinearPSU")
-		(date "2025-04-07")
-		(rev "5.4")
-		(company "Antonio de Vincentiis -Pescara - Italy")
+		(title "DeVincentiis Digital Linear PS")
+		(date "2025-04-08")
+		(rev "5.5")
+		(company "Antonio de Vincentiis - Pescara - Italy")
 		(comment 1 "Digital Linear Power Supply (DLPS mode)")
-		(comment 2 "Autoset transformer voltages & single or double winding")
+		(comment 2 "Autoset transformer voltages , single or double winding")
 	)
 	(lib_symbols
 		(symbol "Amplifier_Operational:TL081"
@@ -7319,6 +7319,12 @@
 		(uuid "2c9eeea7-7fb8-41ee-85ee-71ab2fb4d998")
 	)
 	(junction
+		(at 317.5 105.41)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "31ed37d0-d586-4c47-8a7b-e582c9c3dc84")
+	)
+	(junction
 		(at 31.75 149.86)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -7851,6 +7857,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "d1dfa5ba-cdea-4054-a394-2444c8f00c69")
+	)
+	(junction
+		(at 331.47 97.79)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "d49685c1-d157-457a-972b-ee42e56e07d6")
 	)
 	(junction
 		(at 119.38 99.06)
@@ -9370,7 +9382,7 @@
 	)
 	(wire
 		(pts
-			(xy 245.11 105.41) (xy 318.77 105.41)
+			(xy 245.11 105.41) (xy 317.5 105.41)
 		)
 		(stroke
 			(width 0)
@@ -9658,6 +9670,16 @@
 		)
 		(uuid "5e23af02-184b-4e36-9b1a-b4e08cbcd1bc")
 	)
+	(wire
+		(pts
+			(xy 320.04 97.79) (xy 317.5 97.79)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "5e466a44-3d11-470b-b3bf-aa4d6652c5df")
+	)
 	(polyline
 		(pts
 			(xy 316.23 34.29) (xy 316.23 58.42)
@@ -9698,6 +9720,16 @@
 			(type default)
 		)
 		(uuid "60225283-969f-4283-82b7-f36b46d7c413")
+	)
+	(wire
+		(pts
+			(xy 327.66 97.79) (xy 331.47 97.79)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "602f97a4-3b87-4d15-b157-9f6c9b044e80")
 	)
 	(wire
 		(pts
@@ -10542,6 +10574,16 @@
 	)
 	(wire
 		(pts
+			(xy 317.5 105.41) (xy 318.77 105.41)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "8cb41a24-33ee-4789-8055-b4e7a87b0fc7")
+	)
+	(wire
+		(pts
 			(xy 68.58 138.43) (xy 72.39 138.43)
 		)
 		(stroke
@@ -10830,6 +10872,16 @@
 			(type default)
 		)
 		(uuid "9a68e3e7-939b-4dfc-96fd-8c989a0427d3")
+	)
+	(wire
+		(pts
+			(xy 317.5 97.79) (xy 317.5 105.41)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "9a863a73-205f-4dba-bb52-c8351197a239")
 	)
 	(wire
 		(pts
@@ -14318,6 +14370,24 @@
 			"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
 			"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
 			"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+			"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+			"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+			"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+			"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+			"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+			"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+			"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+			"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+			"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+			"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+			"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+			"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+			"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+			"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+			"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+			"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+			"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+			"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
 			"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=="
 		)
 	)
@@ -16894,6 +16964,72 @@
 			(project "DeVincentiisLinearPSU"
 				(path "/5991d8a9-f3ca-4c4e-8c49-9a8e36fd874b"
 					(reference "R16")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C")
+		(at 323.85 97.79 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "3988fa28-e57a-4c22-af93-59378a433577")
+		(property "Reference" "C22"
+			(at 327.152 99.314 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "330p"
+			(at 324.358 94.234 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_1206_3216Metric_Pad1.33x1.80mm_HandSolder"
+			(at 327.66 96.8248 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 323.85 97.79 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 323.85 97.79 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "c81d38a8-173a-47e9-a40c-56dd4bc686bc")
+		)
+		(pin "2"
+			(uuid "02acd673-c19e-4382-bac8-6e6be158d5dd")
+		)
+		(instances
+			(project "DeVincentiisLinearPSU"
+				(path "/5991d8a9-f3ca-4c4e-8c49-9a8e36fd874b"
+					(reference "C22")
 					(unit 1)
 				)
 			)
@@ -21073,7 +21209,7 @@
 		(dnp no)
 		(uuid "c76216f6-045c-484b-a4e9-596e3fc28f3d")
 		(property "Reference" "R28"
-			(at 322.58 102.87 90)
+			(at 322.072 102.616 90)
 			(effects
 				(font
 					(size 1.27 1.27)
