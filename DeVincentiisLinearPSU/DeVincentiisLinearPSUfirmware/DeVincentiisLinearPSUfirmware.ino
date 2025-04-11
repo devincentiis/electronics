@@ -184,7 +184,7 @@ void setup() {
     lcd.setCursor(0, 1);
     lcd.print((float)max_voltage/10,1);
     lcd.print("V ");
-  } else if (max_voltage > 430){ // single transformer over voltage 
+  } else if (max_voltage > 430){ // transformer over voltage 
     lcd.clear();
     lcd.setCursor(0, 0);
     lcd.print("!OVER VOLTAGE!");
@@ -223,7 +223,10 @@ void setup() {
   delay(2000);
 */
   // drop 1.0V from transformer max_voltage (increase stability)
-  max_voltage = max_voltage - 10;
+  max_voltage = max_voltage*0.9;
+  if (max_voltage > 348){
+    max_voltage = 348;
+  }
   voltampere_set = readIntFromEEPROM(3) ;
   if (voltampere_set > 500){
     voltampere_set = 500;
