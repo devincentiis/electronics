@@ -1,9 +1,7 @@
 # PRESSFLOWino - Multimode, customizable press and flow controller
 ## for air compressor, water pump and other device
 
-Base on Atmel ATmega328P 32 pins and compiled trought Arduino IDE and ADVcapacitiveSensor library.
-The circuit is shared for the purpose of making you participate in the improvement of the [FIRMWARE](https://github.com/devincentiis/electronics/blob/main/PRESSFLOWino/firmwarePressFlow/firmwarePressFlow.ino); for safety reasons and $\textsf{\color{orange}{to avoid risks of electric shock it is essential to power it at 48 Vac}}$ for the Triacs and at 5 Vdc for the digital section. 
-Therefore, **anyone attempting to implement it in practice must be qualified and assumes all civil and criminal liability.**
+Base on Atmel ATmega328P 32 pins and compiled trought Arduino IDE and ADVcapacitiveSensor library. The circuit is shared for the purpose of making you participate in the improvement of the [FIRMWARE](https://github.com/devincentiis/electronics/blob/main/PRESSFLOWino/firmwarePressFlow/firmwarePressFlow.ino); for safety reasons and $\textsf{\color{orange}{to avoid risks of electric shock it is essential to power it at 48 Vac}}$ for the Triacs and at 5 Vdc for the digital section. Therefore, **anyone attempting to implement it in practice must be qualified and assumes all civil and criminal liability.**
 
 **DECLARATION OF RESPONSIBILITY**
 
@@ -64,9 +62,10 @@ By touch the 4 buttons (ENTER, UP, DOWN, BACK) you can select the parameters for
 | U3               | PRESS_SENS   | Connector_PinSocket_2.54mm:PinSocket_1x03_P2.54mm_Vertical     | 1   |
 | U4               | L7805        | Package_TO_SOT_SMD:SOT-89-3                                    | 1   |
 
-<img alt="Schematic" src="https://github.com/devincentiis/electronics/blob/main/PRESSFLOWino/schematic.jpg?raw=true" width="100%">
+[<img alt="Schematic" src="https://github.com/devincentiis/electronics/blob/main/PRESSFLOWino/schematic.jpg?raw=true" width="100%">](https://github.com/devincentiis/electronics/blob/main/PRESSFLOWino/PRESSFLOWino.pdf)
 
-<img alt="PRESSFLOWino Back" src="https://github.com/devincentiis/electronics/blob/main/PRESSFLOWino/PRESSFLOWinoBack.png?raw=true" width="100%">(https://github.com/devincentiis/electronics/blob/main/PRESSFLOWino/PRESSFLOWinoBack.png)
+
+[<img alt="PRESSFLOWino Back" src="https://github.com/devincentiis/electronics/blob/main/PRESSFLOWino/PRESSFLOWinoBack.png?raw=true" width="100%">](https://github.com/devincentiis/electronics/blob/main/PRESSFLOWino/PRESSFLOWinoBack.png)
 
 
 ## License
