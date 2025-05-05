@@ -1,8 +1,8 @@
 fp-info-cache
-*.kicad_prl
-*.lck
-*.grb
-*.gbrjob
 *.DELETED
 *.bak
+*.drl
+*.gbr
+*.gbrjob
+*.lck
 /*-backups

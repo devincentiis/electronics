@@ -1,5 +1,7 @@
+fp-info-cache
 *.lck
 *.grb
+*.gbrjob
 *.DELETED
 *.bak
 /*-backups
