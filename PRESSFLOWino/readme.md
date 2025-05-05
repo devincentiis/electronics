@@ -2,7 +2,7 @@
 ## for air compressor, water pump and other device
 
 Base on Atmel ATmega328P 32 pins and compiled trought Arduino IDE and ADVcapacitiveSensor library.
-The circuit is shared for the purpose of making you participate in the improvement of the firmware; for safety reasons and $\textsf{\color{orange}{to avoid risks of electric shock it is essential to power it at 48 Vac}}$ for the Triacs and at 5 Vdc for the digital section. 
+The circuit is shared for the purpose of making you participate in the improvement of the [FIRMWARE](https://github.com/devincentiis/electronics/blob/main/PRESSFLOWino/firmwarePressFlow/firmwarePressFlow.ino); for safety reasons and $\textsf{\color{orange}{to avoid risks of electric shock it is essential to power it at 48 Vac}}$ for the Triacs and at 5 Vdc for the digital section. 
 Therefore, **anyone attempting to implement it in practice must be qualified and assumes all civil and criminal liability.**
 
 **DECLARATION OF RESPONSIBILITY**
@@ -20,7 +20,7 @@ By touch the 4 buttons (ENTER, UP, DOWN, BACK) you can select the parameters for
 
 ### Firmware library for [Arduino IDE](https://github.com/arduino/Arduino) 
 
-[<img alt="PRESSFLOWino Front" src="https://github.com/devincentiis/electronics/blob/main/PRESSFLOWino/PRESSFLOWinoFront.jpg?raw=true" width="100%">](https://github.com/devincentiis/electronics/blob/main/PRESSFLOWino/PRESSFLOWinoFront.jpg)
+[<img alt="PRESSFLOWino Front" src="https://github.com/devincentiis/electronics/blob/main/PRESSFLOWino/PRESSFLOWinoFront.png?raw=true" width="100%">](https://github.com/devincentiis/electronics/blob/main/PRESSFLOWino/PRESSFLOWinoFront.png)
 
 
 | Reference        | Value        | Footprint                                                      | Qty |
@@ -66,10 +66,8 @@ By touch the 4 buttons (ENTER, UP, DOWN, BACK) you can select the parameters for
 
 <img alt="Schematic" src="https://github.com/devincentiis/electronics/blob/main/PRESSFLOWino/schematic.jpg?raw=true" width="100%">
 
-<img alt="PRESSFLOWino Back" src="https://github.com/devincentiis/electronics/blob/main/PRESSFLOWino/PRESSFLOWinoBack.jpg?raw=true" width="100%">
+<img alt="PRESSFLOWino Back" src="https://github.com/devincentiis/electronics/blob/main/PRESSFLOWino/PRESSFLOWinoBack.png?raw=true" width="100%">(https://github.com/devincentiis/electronics/blob/main/PRESSFLOWino/PRESSFLOWinoBack.png)
 
-### Video (old prototype)
-[![PRESSFLOWino for Arduino Nano](http://img.youtube.com/vi/hwenW8Aa0GM/0.jpg)](http://www.youtube.com/watch?v=hwenW8Aa0GM "PRESSFLOWino for Arduino Nano")
 
 ## License
 
