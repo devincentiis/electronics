@@ -69,6 +69,8 @@ By touch the 4 buttons (ENTER, UP, DOWN, BACK) you can select the parameters for
 
 [<img alt="PRESSFLOWino Back" src="https://github.com/devincentiis/electronics/blob/main/PRESSFLOWino/PRESSFLOWinoBack.png?raw=true">](https://github.com/devincentiis/electronics/blob/main/PRESSFLOWino/PRESSFLOWinoBack.png)
 
+### Assembling
+[<img alt="PRESSFLOWino Assembling" src="https://github.com/devincentiis/electronics/blob/main/PRESSFLOWino/ConnectingSpacer/ConnectingSpacerAssembling.jpg?raw=true">](https://github.com/devincentiis/electronics/blob/main/PRESSFLOWino/ConnectingSpacer/ConnectingSpacerAssembling.jpg)
 
 ## License
 
