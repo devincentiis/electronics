@@ -18,6 +18,8 @@ bool btnStateDWN = LOW;
 ADVcapacitiveSensor touchbtnENT;
 bool prevBtnENT = LOW;
 bool btnStateENT = LOW;
+int btnENT_pressed_counter;
+#define LONGPRESS_LEN    4  // Min nr of loops for a long press
 ADVcapacitiveSensor touchbtnBCK;
 bool prevBtnBCK = LOW;
 bool btnStateBCK = LOW;
@@ -49,7 +51,8 @@ const int MINPRESS = 5;
 
 #define ALARM_TIME          40  // alarm time (seconds)
 #define ATTEMPTS            10  // attempts before alarm
-#define TIME_FLUSH_CONTROL  6   // flow sensor control delay
+#define TIME_FLUSH_CONTROL  25   // flow sensor: max seconds without flush
+int flush_control_counter;
 #define MOTOR_START_DELAY   4   // 4 sec delay (ex. solenoid valve)
 
 #define FLOWSENS 2 
@@ -243,8 +246,12 @@ void setup() {
     pressFactor = 1;
     EEPROM.put(6,pressFactor);
   }
+
   pulseCount = 0;  
   flowRate = 0.0;
+  btnENT_pressed_counter = 0;
+  flush_control_counter = 0;
+
   if (fluxSensorType_val <= 1 ) {  // switch or no flux sensor
     // The flow-switch sensor (ON-OFF) is connected to pin 2 which
     pinMode(FLOWSENS,INPUT_PULLUP);
@@ -431,32 +438,60 @@ void processButton(char buttonPressed) {
 void viewHome() {
   lcd.clear();
   lcd.setCursor(0, 0);
-  if (fluxSensorType_val >= 1 ) {  // switch or hall effect flux sensor
-    if (fluxSensorType_val == 1 ) {  // switch ON-OFF
-      if (pulseCount==0){
-        if (motor_status) { 
-          lcd.print("Flow: YES  ");
+  if (ctrlMode_val == 1){ 
+  // MODE COMPRESSOR
+    if (fluxSensorType_val >= 1 ) {  // switch or hall effect flux sensor
+      if (fluxSensorType_val == 1 ) {  // switch ON-OFF
+        if (pulseCount==0){
+          if (motor_status) { 
+            lcd.print("Flow: YES  ");
+          } else {
+            lcd.print("Refill oil!");
+          }
         } else {
-          lcd.print("Refill oil!");
+          lcd.print("Flow: NO   ");
         }
-      } else {
-        lcd.print("Flow: NO   ");
+        if (operating_time > 0){
+          lcd.print(operating_time);
+        }
+      } else { // hall effect sensor
+        lcd.print("Flow: ");
+        lcd.print(flowRate,1);
+        lcd.print(" L/m    ");
       }
+    } else { // no flow sensor
       if (operating_time > 0){
+        lcd.print("ON for ");
         lcd.print(operating_time);
+        lcd.print("s   ");
+      } else {
+        lcd.print("  PRESSFLOWino ");
       }
-    } else { // hall effect sensor
-      lcd.print("Flow: ");
-      lcd.print(flowRate,1);
-      lcd.print(" L/m    ");
     }
-  } else { // no flow sensor
-    if (operating_time > 0){
-      lcd.print("ON for ");
-      lcd.print(operating_time);
-      lcd.print("s   ");
-    } else {
-      lcd.print("  PRESSFLOWino ");
+  } else {
+  // MODE PUMP
+    if (fluxSensorType_val >= 1 ) {  // switch or hall effect flux sensor
+      if (fluxSensorType_val == 1 ) {  // switch ON-OFF
+        if (pulseCount==0){
+        } else {
+          lcd.print("Flow: NO   ");
+        }
+        if (operating_time > 0){
+          lcd.print(operating_time);
+        }
+      } else { // hall effect sensor
+        lcd.print("Flow: ");
+        lcd.print(flowRate,1);
+        lcd.print(" L/m    ");
+      }
+    } else { // no flow sensor
+      if (operating_time > 0){
+        lcd.print("ON for ");
+        lcd.print(operating_time);
+        lcd.print("s   ");
+      } else {
+        lcd.print("  PRESSFLOWino ");
+      }
     }
   }
   lcd.setCursor(0, 1);
@@ -841,7 +876,7 @@ void viewAlarm (int optalarm) {
       break;
     case 2:                                 // Motor run but no flux 
       lcd.clear();
-      lcd.print("! ALARM ! ");
+      lcd.print("! ALARM !");
       // second row
       lcd.setCursor(0, 1);
       lcd.print("Motor ON no flux");
@@ -858,6 +893,7 @@ void viewAlarm (int optalarm) {
         alarm_time = ALARM_TIME;
         attempts_rest --; // decrement
         operating_time = 0; // reset alarm time
+        flush_control_counter=0;
         motor_status = true; // motor ON
         digitalWrite(MOTOR, HIGH );
         return; //exit
@@ -872,7 +908,9 @@ void viewAlarm (int optalarm) {
       _delay_ms(250);
       alarm_time --;
     }
-    if (digitalRead(BTN_BACK) == LOW ) { // se premo ESCape riazzero tutto 
+    btnStateBCK = touchbtnBCK.booltouch();
+    if (btnStateBCK == HIGH ) { // push BACK 
+      flush_control_counter=0;
       alarm_time = ALARM_TIME;
       attempts_rest = ATTEMPTS; //reset rest attempts
       operating_time = 0; // reset alarm timer
@@ -905,7 +943,18 @@ void onesec(){
       pulseFactor = flowFactorData[fluxSensorType_val];
       // Disable the interrupt while calculating flow rate 
       detachInterrupt(flowsensorInterrupt);
-      flowRate = pulseCount*pulseFactor/10;    
+      flowRate = pulseCount*pulseFactor/10;
+      if (motor_status == true){
+        // TIME_FLUSH_CONTROL 
+        if (flush_control_counter > TIME_FLUSH_CONTROL ) {
+          viewAlarm(2);
+        } else if (pulseCount <= 1 ) {
+          flush_control_counter++;
+        } else  { 
+          flush_control_counter=0;
+          attempts_rest = ATTEMPTS; //reset rest attempts
+        }
+      }
     }
     if(menuLevel==1){
       viewLevel_1();
@@ -915,6 +964,9 @@ void onesec(){
       viewLevel_3();
     } else {
       viewHome();
+      if ( btnENT_pressed_counter <= LONGPRESS_LEN ) {
+        btnENT_pressed_counter++;
+      }
     }
     if(pressValue >= maxPress_val){
       if (menuLevel == 0){
@@ -969,30 +1021,43 @@ void decisec(){
       lcd.display();
       startDeciSecMillis = currentMillis; 
     }
-    if (fluxSensorType_val <= 1 ) {  // switch or no flux sensor
-      pulseCount = digitalRead(FLOWSENS);
-    } else if (ctrlMode_val == 1){ // mode compressor force fluxSensorType to no flux sensor
-      fluxSensorType_val = 0;
-    }   
-    if (operating_time >= max_on_time) {
-        //  STOP ALL!!!
-        //  Motor has been running for too long: THERE MAY BE A LEAK!
-        motor_status = false; // stop motor
-        viewAlarm(1); // leak error
-    } else if (operating_time >= (start_delay + 1)) {
-        digitalWrite(EVALVE, HIGH);
-        valveStatus = true;
-        if ( pulseCount == HIGH && fluxSensorType_val == 1 ) { // switch as sensor but no flux
+
+    if (ctrlMode_val == 1){ 
+    // MODE COMPRESSOR
+      if (fluxSensorType_val <= 1 ) {  // switch or no flux sensor
+        pulseCount = digitalRead(FLOWSENS);
+      } 
+      if (operating_time >= max_on_time) {
           //  STOP ALL!!!
           //  Motor has been running for too long: THERE MAY BE A LEAK!
-          //  Flow control appears that the level switch-flow is open therefore at 1, 
-          //  i.e. the float at the top, it means that there is no air flow, 
-          //  so I stop everything and write the error on display (flow error)        
           motor_status = false; // stop motor
-          if ( menuLevel == 0 ) { // switch as sensor but no flux
-            viewAlarm(2); // flow error
+          viewAlarm(1); // leak error
+      } else if (operating_time >= (start_delay + 1)) {
+          digitalWrite(EVALVE, HIGH);
+          valveStatus = true;
+          if ( pulseCount == HIGH && fluxSensorType_val == 1 ) { // switch as sensor but no flux
+            //  STOP ALL!!!
+            //  Motor has been running for too long: THERE MAY BE A LEAK!
+            //  Flow control appears that the level switch-flow is open therefore at 1, 
+            //  i.e. the float at the top, it means that there is no air flow, 
+            //  so I stop everything and write the error on display (flow error)        
+            motor_status = false; // stop motor
+            if ( menuLevel == 0 ) { // switch as sensor but no flux
+              viewAlarm(2); // flow error
+            }
           }
-        }
+      }
+    } else {
+    // MODE PUMP
+      if (fluxSensorType_val <= 1 ) {  // switch or no flux sensor
+        pulseCount = digitalRead(FLOWSENS);
+      }   
+      if (operating_time >= max_on_time) {
+          //  STOP ALL!!!
+          //  Motor has been running for too long: THERE MAY BE A LEAK!
+          motor_status = false; // stop motor
+          viewAlarm(1); // leak error
+      }
     }
   }
 }
@@ -1033,10 +1098,24 @@ void loop() {
     buttonPressed = 'B';
     lightStatus = true;
     processButton(buttonPressed);  
-  } else if (btnStateENT == HIGH && prevBtnENT == LOW ) {
-    buttonPressed = 'E';
-    lightStatus = true;
-    processButton(buttonPressed);  
+  } else if (btnStateENT == HIGH && prevBtnENT == LOW) {
+    if (menuLevel == 0) {
+      btnENT_pressed_counter = 0;
+      buttonPressed = 'E';
+      lightStatus = true;
+    } else {
+      buttonPressed = 'E';
+      lightStatus = true;
+      processButton(buttonPressed);
+    }
+  } else if (menuLevel == 0 && btnStateENT == LOW && prevBtnENT == HIGH) {
+    btnENT_pressed_counter = 0;
+  } else if (menuLevel == 0 && btnStateENT == HIGH && prevBtnENT == HIGH ){
+    if (btnENT_pressed_counter >= LONGPRESS_LEN ) {
+      buttonPressed = 'E';
+      btnENT_pressed_counter = 0;
+      processButton(buttonPressed);
+    }
   }
   prevBtnUP  = btnStateUP;   
   prevBtnDWN = btnStateDWN; 
