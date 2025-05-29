@@ -6,8 +6,8 @@
 	(paper "A3")
 	(title_block
 		(title "DeVincentiis Digital Linear PS")
-		(date "2025-05-02")
-		(rev "5.7")
+		(date "2025-05-29")
+		(rev "5.8")
 		(company "Antonio de Vincentiis - Pescara - Italy")
 		(comment 1 "Digital Linear Power Supply (DLPS mode)")
 		(comment 2 "Autoset transformer voltages , single or double winding")
@@ -7325,6 +7325,12 @@
 		(uuid "31ed37d0-d586-4c47-8a7b-e582c9c3dc84")
 	)
 	(junction
+		(at 360.68 74.93)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "34143497-583d-4b87-9939-1289d99bf8d4")
+	)
+	(junction
 		(at 31.75 149.86)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -7973,6 +7979,12 @@
 		(uuid "f326dcca-0ed1-4365-94b2-a2a9fa44c7f8")
 	)
 	(junction
+		(at 360.68 85.09)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "f4cf8a1c-a363-4241-a343-0427613a5c3a")
+	)
+	(junction
 		(at 327.66 201.93)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -8310,6 +8322,16 @@
 	)
 	(wire
 		(pts
+			(xy 360.68 85.09) (xy 360.68 97.79)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "10a60adc-7ba2-4bfb-bb80-fe3b962fb962")
+	)
+	(wire
+		(pts
 			(xy 44.45 219.71) (xy 44.45 242.57)
 		)
 		(stroke
@@ -8417,6 +8439,16 @@
 			(type default)
 		)
 		(uuid "1424d1e2-2dba-4902-86d2-c844a4ec1527")
+	)
+	(wire
+		(pts
+			(xy 360.68 74.93) (xy 360.68 78.74)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "145d2294-991a-4572-9336-c2345367f89a")
 	)
 	(wire
 		(pts
@@ -8918,6 +8950,16 @@
 			(type default)
 		)
 		(uuid "2ec47d6c-62e8-4b8a-962d-6fd60b424bf6")
+	)
+	(wire
+		(pts
+			(xy 355.6 76.2) (xy 355.6 74.93)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "30579f84-02da-498f-a5fd-6ba15a505dd9")
 	)
 	(wire
 		(pts
@@ -9469,6 +9511,16 @@
 			(type default)
 		)
 		(uuid "52dcba28-f765-43b5-a481-dcd3eeb65404")
+	)
+	(wire
+		(pts
+			(xy 355.6 74.93) (xy 360.68 74.93)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "53a59f2b-d99c-4874-87f6-817484e4f199")
 	)
 	(wire
 		(pts
@@ -10805,7 +10857,7 @@
 	)
 	(wire
 		(pts
-			(xy 360.68 50.8) (xy 360.68 78.74)
+			(xy 360.68 50.8) (xy 360.68 74.93)
 		)
 		(stroke
 			(width 0)
@@ -11769,6 +11821,16 @@
 	)
 	(wire
 		(pts
+			(xy 355.6 85.09) (xy 360.68 85.09)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c0d030e8-c75f-4691-9959-ff2d04c00c26")
+	)
+	(wire
+		(pts
 			(xy 16.51 149.86) (xy 20.32 149.86)
 		)
 		(stroke
@@ -12086,6 +12148,16 @@
 			(type default)
 		)
 		(uuid "cdd0e254-a101-4b98-a9ae-1ff128121280")
+	)
+	(wire
+		(pts
+			(xy 355.6 83.82) (xy 355.6 85.09)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ce012252-a849-4560-9893-029b0e580dc8")
 	)
 	(wire
 		(pts
@@ -12581,7 +12653,7 @@
 	)
 	(wire
 		(pts
-			(xy 360.68 81.28) (xy 360.68 97.79)
+			(xy 360.68 81.28) (xy 360.68 85.09)
 		)
 		(stroke
 			(width 0)
@@ -14337,6 +14409,24 @@
 			"CiAgICAgIChwcm9wZXJ0eSAobmFtZSAiU2hlZXRmaWxlIikgKHZhbHVlICJEZVZpbmNlbnRpaXNM"
 			"aW5lYXJQU1Uua2ljYWRfc2NoIikpCiAgICAgIChwcm9wZXJ0eSAobmFtZSAia2lfa2V5d29yZHMi"
 			"KSAodmFsdWUgIlIgcmVzIHJlc2lzdG9yIikpCiAgICAgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+			"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+			"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+			"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+			"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+			"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+			"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+			"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+			"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+			"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+			"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+			"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+			"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+			"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+			"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+			"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+			"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+			"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+			"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
 			"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
 			"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
 			"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
@@ -16884,6 +16974,72 @@
 			(project "DeVincentiisLinearPSU"
 				(path "/5991d8a9-f3ca-4c4e-8c49-9a8e36fd874b"
 					(reference "Q3")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C")
+		(at 355.6 80.01 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "3403dbd4-2d44-416d-921c-41b5ce081972")
+		(property "Reference" "C19"
+			(at 353.06 77.47 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "470n"
+			(at 353.06 82.55 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_1206_3216Metric_Pad1.33x1.80mm_HandSolder"
+			(at 356.5652 83.82 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 355.6 80.01 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 355.6 80.01 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "f5dacac6-4f14-4baa-bc6f-423f097c4c9a")
+		)
+		(pin "2"
+			(uuid "90969e6c-245c-4f7a-8fbc-1f65be122c3b")
+		)
+		(instances
+			(project "DeVincentiisLinearPSU"
+				(path "/5991d8a9-f3ca-4c4e-8c49-9a8e36fd874b"
+					(reference "C19")
 					(unit 1)
 				)
 			)
