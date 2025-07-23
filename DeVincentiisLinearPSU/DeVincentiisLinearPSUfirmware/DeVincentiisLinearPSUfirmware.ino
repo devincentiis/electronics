@@ -23,6 +23,7 @@ version 20250402
 #define RELAY12_24 PIN_PC1              // (PC1) pin 13 to relay driver transistor
 
 unsigned long timer_decisec = millis();
+int current_decisec = 0;
 
 // ROTARY ENCODE
 SimpleRotary rotary(ROT_A, ROT_B, ROT_S);
@@ -268,6 +269,11 @@ void setup() {
 void loop() {
   currentMillis = millis();
   if (currentMillis - timer_decisec >= 100) { // 0,1 seconds
+    current_decisec++;
+    if (current_decisec >= 10) { // every one second
+      lcd.clear();
+      current_decisec=0;
+    }
     // check shotdown status
     shutdown_detect = digitalRead(DETECT_SHUTDOWN);
     // read real voltage
