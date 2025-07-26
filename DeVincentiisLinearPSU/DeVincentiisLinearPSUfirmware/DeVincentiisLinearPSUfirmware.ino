@@ -1,7 +1,7 @@
 /*
 Digital Linear Power Supply by ADVisor Antonio De Vincentiis - Pescara - Italy 
 https://github.com/devincentiis
-version 20250402
+version 20250716
 */
 #include "avr/io.h"
 #include "util/delay.h"
