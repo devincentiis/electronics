@@ -1,7 +1,7 @@
 /*
 Digital Linear Power Supply by ADVisor Antonio De Vincentiis - Pescara - Italy 
 https://github.com/devincentiis
-version 20250716
+version 20260203
 */
 #include "avr/io.h"
 #include "util/delay.h"
@@ -140,7 +140,7 @@ void setup() {
   // Note this sets all three pins to use the same state.
   rotary.setTrigger(HIGH);
   // Set the debounce delay in ms  (Default: 2)
-  rotary.setDebounceDelay(1);
+  rotary.setDebounceDelay(0.5);
   // Set the error correction delay in ms  (Default: 200)
   rotary.setErrorDelay(200);
   // Output to zero for measure transformer voltage
@@ -347,7 +347,7 @@ void loop() {
 
   // ROTARY ENCODE
   byte i;
-  i = rotary.rotate();
+  i = rotate();
   if (mode_set==0){ // set voltage (default at startup)
     if ( i == 2 && voltage_set < max_voltage) {
       voltage_set++;
@@ -375,7 +375,7 @@ void loop() {
   }
   byte l;
   // Check to see if button is pressed for 1 second
-  l = rotary.pushLong(100);
+  l = pushLong(100);
   if ( l == 1 ) {
     if ( mode_set == 2 ){ // update max_current without reboot
       max_current = voltampere_set*500/max_voltage;
