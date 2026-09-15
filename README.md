@@ -1,11 +1,6 @@
 # My electronic projects shared with every enthusiasts.
 ## Used KiCAD EDA for design schematic diagrams and PCB 
 
-### [Digital Linear Power Supply](https://github.com/devincentiis/electronics/blob/main/DeVincentiisLinearPSU) 
-Digitally controlled linear power supply
-
-[<img alt="DeVincentiisLinearPS" src="https://github.com/devincentiis/electronics/blob/main/DeVincentiisLinearPSU/picture6.jpg?raw=true" width="50%">](https://github.com/devincentiis/electronics/blob/main/DeVincentiisLinearPSU/)
-
 ### [PRESSFLOWino](https://github.com/devincentiis/electronics/blob/main/PRESSFLOWino) 
 Multimode, customizable press and flow controller with ATmega328P
 
@@ -15,12 +10,6 @@ Multimode, customizable press and flow controller with ATmega328P
 ATtiny412 water waste tank alarm
 
 [<img alt="WaterFlushMuse" src="https://github.com/devincentiis/electronics/blob/main/WaterFlushMuse/render.png?raw=true" width="50%">](https://github.com/devincentiis/electronics/blob/main/WaterFlushMuse/)
-
-### [Thermostatino](https://github.com/devincentiis/electronics/blob/main/Thermostatino) 
-Arduino Nano 3-digit 7-segment thermostat 
-
-[<img alt="Thermostatino Top" src="https://github.com/devincentiis/electronics/blob/main/Thermostatino/ThermostatinoTop.jpg?raw=true" width="50%">](https://github.com/devincentiis/electronics/blob/main/Thermostatino/)
-
 
 ## License
 
