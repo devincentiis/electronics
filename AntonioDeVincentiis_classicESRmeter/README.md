@@ -115,10 +115,10 @@ Imposta la macro a `2` e carica lo sketch finale. Lo strumento è pronto per l'u
 ---
 ### ⚡ Schematic / Schema Elettrico
 
-![Prewiev](./\AntonioDeVincentiis_classicESRmeter\hardware\AntonioDeVincentiis_classicESRmeter\\AntonioDeVincentiis_classicESRmeter.png)
+![Prewiev](./hardware/AntonioDeVincentiis_classicESRmeter/AntonioDeVincentiis_classicESRmeter.png)
 
 💡 _Print or zoom?_ 
-👉 **[Open high resolution schematic (PDF)](./\AntonioDeVincentiis_classicESRmeter\hardware\AntonioDeVincentiis_classicESRmeter\AntonioDeVincentiis_classicESRmeter.pdf)**
+👉 **[Open high resolution schematic (PDF)](./hardware/AntonioDeVincentiis_classicESRmeter/AntonioDeVincentiis_classicESRmeter.pdf)**
 
 
 ## 📦 Repository Content / Contenuto del Repository
