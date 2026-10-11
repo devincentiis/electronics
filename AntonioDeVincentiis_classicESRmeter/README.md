@@ -113,6 +113,13 @@ Imposta la macro a `2` e carica lo sketch finale. Lo strumento è pronto per l'u
 * **Pressione Corta:** Se premuto durante il normale funzionamento, spegne istantaneamente il dispositivo isolando elettronicamente il pin per evitare rimbalzi.
 
 ---
+### ⚡ Schematic / Schema Elettrico
+
+![Prewiev](./\AntonioDeVincentiis_classicESRmeter\hardware\AntonioDeVincentiis_classicESRmeter\\AntonioDeVincentiis_classicESRmeter.png)
+
+💡 _Print or zoom?_ 
+👉 **[Open high resolution schematic (PDF)](./\AntonioDeVincentiis_classicESRmeter\hardware\AntonioDeVincentiis_classicESRmeter\AntonioDeVincentiis_classicESRmeter.pdf)**
+
 
 ## 📦 Repository Content / Contenuto del Repository
 
