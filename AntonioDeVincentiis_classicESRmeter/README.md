@@ -1,4 +1,5 @@
-# 🛠️ Open-Source In-Circuit ESR Meter (ATtiny412)
+# 🛠️ Classic ESR meter
+In-Circuit ESR Meter standalone ATtiny412 platform.
 
 [![Platform: ATtiny412](https://img.shields.io/badge/Platform-ATtiny412-blue.svg)](https://www.microchip.com)
 [![Framework: Arduino / megaTinyCore](https://img.shields.io/badge/Framework-Arduino%20%2F%20megaTinyCore-orange.svg)](https://github.com/SpenceKonde/megaTinyCore)
