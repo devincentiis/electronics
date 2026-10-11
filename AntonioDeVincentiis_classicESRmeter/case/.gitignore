@@ -1,0 +1,11 @@
+fp-info-cache
+*.DELETED
+*.bak
+*.drl
+*.gbr
+*.gbrjob
+*.lck
+/*-backups
+.history/
+*.FCStd1
+*.FCBak
