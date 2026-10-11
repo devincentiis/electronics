@@ -6,4 +6,4 @@ fp-info-cache
 *.gbrjob
 *.lck
 /*-backups
-./history
+.history/
