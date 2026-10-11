@@ -12,7 +12,8 @@ Select your preferred language:
 * [Versione Italiana](#-versione-italiana)
 
 ---
-
+![](85C1_1.jpg)
+*ESRmeter 85C1 100uA - Case Model T*
 ## 🇬🇧 English Version
 
 A complete project (Hardware, Firmware, and 3D files) to build a **high-precision analog ESR Meter** optimized for direct *in-circuit* measurements (without desoldering capacitors). The instrument can resolve variations down to **0.01 Ω** in the critical zone of the scale, extending its logarithmic readout up to **20 Ω**.
@@ -133,3 +134,9 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 * **AI Collaboration:** Un ringraziamento speciale all'assistente AI di Google per aver collaborato attivamente allo sviluppo di questo progetto, accelerando notevolmente le fasi di ricerca, ottimizzazione del codice firmware e stesura della documentazione tecnica.
 * **AI Collaboration:** A special thanks to Google's AI assistant for actively collaborating on this project, significantly accelerating the research, firmware code optimization, and technical documentation drafting.
+
+---
+
+## Reuse and creations
+*ESRmeter old & reused YX-360TRn tester*
+![](YX-360TR.jpg)
