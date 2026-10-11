@@ -99,7 +99,7 @@ L'architettura software è sviluppata in C++ per **ATtiny412** tramite Arduino I
 | **7** | PA3 | Output | Controllo Latch MOSFET (Mantenimento alimentazione) |
 | **8** | GND | Power | Massa comune del circuito |
 
-### 🔧 Guia alla Configurazione e Taratura (FIRMWARE_USAGE_MODE)
+### 🔧 Guida alla Configurazione e Taratura (FIRMWARE_USAGE_MODE)
 Il firmware implementa una sequenza di calibrazione guidata gestibile tramite la macro `#define FIRMWARE_USAGE_MODE` presente in cima sullo sketch:
 
 #### 🟩 Passo 1: MODO 0 - Taratura Statica Hardware
