@@ -62,6 +62,14 @@ Set the macro to `2` and upload the final sketch. The instrument is now ready fo
 * **Boot Self-Test:** At power-on, short the probes when the needle swings to mid-scale. Then, open the probes when it swings close to zero. The instrument automatically corrects the offset by detecting the ambient thermal drift.
 * **1-Ohm Reference Saving:** Connect a precision 1 Ω resistor to the probes and hold down the power button for more than 2 seconds. The firmware validates the reading using a geometric stability filter and stores the value in the **EEPROM**, instantly updating the logarithmic curve.
 * **Short Press:** Pressing the button during normal operation instantly turns off the device, electronically isolating the pin to prevent bounces.
+---
+### ⚡ Schematic / Schema Elettrico
+
+![Prewiev](./hardware/AntonioDeVincentiis_classicESRmeter/AntonioDeVincentiis_classicESRmeter_schematic.png)
+
+💡 _Print or zoom?_ 
+👉 **[Open high resolution schematic / Apri ad alta risoluzione (PDF)](./hardware/AntonioDeVincentiis_classicESRmeter/AntonioDeVincentiis_classicESRmeter.pdf)**
+
 
 ---
 
@@ -112,14 +120,6 @@ Imposta la macro a `2` e carica lo sketch finale. Lo strumento è pronto per l'u
 * **Autotesta al Boot:** All'accensione, unisci i puntali quando la lancetta oscilla a metà scala. Successivamente riapri i puntali quando oscilla vicino allo zero. Lo strumento corregge autonomamente l'offset rilevando la deriva termica ambientale del momento.
 * **Salvataggio Campione (1 Ohm):** Collega una resistenza campione da 1 Ω di precisione ai puntali e tieni premuto il pulsante di accensione per più di 2 secondi. Il firmware convaliderà la lettura tramite un filtro geometrico di stabilità e memorizzerà il valore nella **EEPROM**, aggiornando istantaneamente la curva logaritmica.
 * **Pressione Corta:** Se premuto durante il normale funzionamento, spegne istantaneamente il dispositivo isolando elettronicamente il pin per evitare rimbalzi.
-
----
-### ⚡ Schematic / Schema Elettrico
-
-![Prewiev](./hardware/AntonioDeVincentiis_classicESRmeter/AntonioDeVincentiis_classicESRmeter.png)
-
-💡 _Print or zoom?_ 
-👉 **[Open high resolution schematic (PDF)](./hardware/AntonioDeVincentiis_classicESRmeter/AntonioDeVincentiis_classicESRmeter.pdf)**
 
 
 ## 📦 Repository Content / Contenuto del Repository
