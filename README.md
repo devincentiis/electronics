@@ -1,6 +1,11 @@
 # My electronic projects shared with every enthusiasts.
 ## Used KiCAD EDA for design schematic diagrams and PCB 
 
+### [Classic ESR meter](https://github.com/devincentiis/electronics/blob/main/AntonioDeVincentiis_classicESRmeter) 
+ Open-Source In-Circuit ESR Meter (ATtiny412)
+
+[<img alt="classic ESR meter" src="https://github.com/devincentiis/electronics/blob/main/AntonioDeVincentiis_classicESRmeter/classiESRmeter.png?raw=true" width="50%">](https://github.com/devincentiis/electronics/blob/main/AntonioDeVincentiis_classicESRmeter/)
+
 ### [PRESSFLOWino](https://github.com/devincentiis/electronics/blob/main/PRESSFLOWino) 
 Multimode, customizable press and flow controller with ATmega328P
 
