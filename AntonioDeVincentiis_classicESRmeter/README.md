@@ -89,7 +89,7 @@ Set the macro to `2` and upload the final sketch. The instrument is now ready fo
 
 ---
 
-![PCB](./hardware/AntonioDeVincentiis_classicESRmeter/pcb_render.png)
+![PCB](./pcb_render.png)
 
 ---
 
