@@ -19,7 +19,7 @@ Select your preferred language:
 
 A complete project (Hardware, Firmware, and 3D files) to build a **high-precision analog ESR Meter** optimized for direct *in-circuit* measurements (without desoldering capacitors). The instrument can resolve variations down to **0.01 Ω** in the critical zone of the scale, extending its logarithmic readout up to **20 Ω**.
 
-The software architecture is developed in C++ for the **ATtiny412** using the Arduino IDE (via the `megaTinyCore` library). It performs deterministic sampling at 100 kHz without requiring external Sample & Hold components, using only signal conditioning/amplification through two common BC847C low-noise transistors.
+The software architecture is developed in C++ for the **ATtiny412** using the Arduino IDE (via the `megaTinyCore` library). It performs deterministic sampling at 100 kHz without requiring external Sample & Hold components, using only signal conditioning/amplification through two common BC850C low-noise transistors.
 
 ### 🚀 Key Features
 * **Realistic In-Circuit Measurement:** Operates at a low excitation voltage to prevent surrounding semiconductor junctions from turning on during in-circuit testing.
@@ -77,7 +77,7 @@ Set the macro to `2` and upload the final sketch. The instrument is now ready fo
 
 Un progetto completo (Hardware, Firmware e 3D) per la realizzazione di un **ESR Meter analogico ad alta precisione** ottimizzato per misure dirette *in-circuit* (senza dissaldare i condensatori). Lo strumento è capace di discriminare variazioni fino a **0.01 Ω** nella zona critica della scala, estendendo la lettura logaritmica fino a **20 Ω**.
 
-L'architettura software è sviluppata in C++ per **ATtiny412** tramite Arduino IDE (grazie alla libreria `megaTinyCore`) ed esegue un campionamento deterministico a 100 kHz senza l'ausilio di componenti esterni di Sample & Hold ma il solo condizionamento/amplificazione del segnale attraverso due comunissimi transistor a basso rumore BC847C.
+L'architettura software è sviluppata in C++ per **ATtiny412** tramite Arduino IDE (grazie alla libreria `megaTinyCore`) ed esegue un campionamento deterministico a 100 kHz senza l'ausilio di componenti esterni di Sample & Hold ma il solo condizionamento/amplificazione del segnale attraverso due comunissimi transistor a basso rumore BC850C.
 
 ### 🚀 Caratteristiche Principali
 * **Misura In-Circuit Realistica:** Lavora a bassa tensione di eccitazione per evitare l'apertura delle giunzioni dei semiconduttori circostanti durante il test sulla scheda.
