@@ -17,6 +17,9 @@ Select your preferred language:
 *ESRmeter 85C1 100uA - Case Model T*
 ## 🇬🇧 English Version
 
+### The innovation:💡
+What distinguishes this from the many other circuit solutions found online is the inclusion of a 10 Ω resistor in parallel with the electrolytic capacitor under test. While this prevents ESR measurements beyond a few tens of ohms (which are of no practical use), it offers significant advantages: it creates a resistive voltage divider that eliminates the need for constant-current generators, limits the maximum voltage across the component, allows the capacitor to discharge as quickly as it charges, and provides better protection than the standard pair of anti-parallel diodes.
+
 A complete project (Hardware, Firmware, and 3D files) to build a **high-precision analog ESR Meter** optimized for direct *in-circuit* measurements (without desoldering capacitors). The instrument can resolve variations down to **0.01 Ω** in the critical zone of the scale, extending its logarithmic readout up to **20 Ω**.
 
 The software architecture is developed in C++ for the **ATtiny412** using the Arduino IDE (via the `megaTinyCore` library). It performs deterministic sampling at 100 kHz without requiring external Sample & Hold components, using only signal conditioning/amplification through two common BC850C low-noise transistors.
@@ -27,6 +30,19 @@ The software architecture is developed in C++ for the **ATtiny412** using the Ar
 * **Oversampling and Advanced Filtering:** Executes 64x hardware oversampling combined with a software **EMA (Exponential Moving Average)** filter to guarantee a perfectly stable, vibration-free meter needle.
 * **Fixed-Point Logarithmic Scale:** Fast polynomial approximation maps ESR values onto the analog microammeter, ensuring extremely high sub-ohm resolution while expanding readability up to 20 Ω.
 * **Smart Power Management (Kill-Switch):** Total shutdown via a Latch MOSFET paired with an auto-power-off feature ensures ~0 mA parasitic current draw in standby.
+
+### ⏳ History
+
+This project was born to solve a well-known issue in electronics troubleshooting: making precise, in-circuit ESR measurements without desoldering components. The initial goal was ambitious yet budget-friendly: creating a tool capable of 0.01 Ω sensitivity without relying on expensive and complex microcontrollers.
+
+The development took a few months and progressed through these key milestones:
+
+* **1. Genesis & Simulation:** The initial concept featured fast operational amplifiers and a precision rectifier. SPICE simulations validated the theory, producing millivolt outputs perfectly readable by a 10-bit ADC (ranging from 0.2 mV for 0.01 Ω up to over 400 mV for 20 Ω).
+* **2. The Inductance (ESL) Challenge:** Deeper simulation revealed that inductive reactance caused unwanted voltage spikes on the edges of the 100 kHz square wave. This was solved by replacing the standard rectifier with a delayed *Sample & Hold* approach, bypassing the first 3 µs of spikes to sample only the clean plateau.
+* **3. Hardware Simplification & Thermal Compensation:** To lower production costs, the external S&H circuit was replaced by utilizing the MCU's internal ADC, conditioning the signal with just two common BJT transistors. To prevent thermal drift from affecting low-range readings, a compensation diode was added. The firmware checks this at boot, warning the user via a sweeping meter needle if the offset shifts outside the 0.95V - 1.05V tolerance.
+* **4. Lab Testing & Real-World Validation:** Once the definitive PCBs arrived, real-world tests exceeded expectations. Pairing the board with custom-made, low-cost Kelvin probes allowed the ADC to resolve variations down to 3.33 mΩ.
+* **5. Firmware & Dual-Scale Optimization:** The final challenge was fitting the software into an ultra-cheap 50-cent MCU (ATtiny412). By heavily optimizing timers and ADC registers to sample within 1-2 µs, the firmware takes up just 80% of the memory. It implements an intelligent dual-scale system: Scale 1 (0.01 Ω to 1.00 Ω) for maximum precision, and Scale 2 (1 Ω to 20 Ω) for general readings.
+
 
 ### 📐 Pinout & Connections (ATtiny412)
 
@@ -67,13 +83,20 @@ Set the macro to `2` and upload the final sketch. The instrument is now ready fo
 
 ![Prewiev](./hardware/AntonioDeVincentiis_classicESRmeter/AntonioDeVincentiis_classicESRmeter_schematic.png)
 
-💡 _Print or zoom?_ 
+🖨️ _Print or zoom?_ 
 👉 **[Open high resolution schematic / Apri ad alta risoluzione (PDF)](./hardware/AntonioDeVincentiis_classicESRmeter/AntonioDeVincentiis_classicESRmeter.pdf)**
 
 
 ---
 
+![PCB](./hardware/AntonioDeVincentiis_classicESRmeter/pcb_render.png)
+
+---
+
 ## 🇮🇹 Versione Italiana
+
+### L'innovazione 💡
+La differenza con le molte altre soluzioni circuitali reperibili sulla rete internet è l’aver introdotto una resistenza da 10 Ω in parallelo al condensatore elettrolitico da testare, essa non consente la misura ESR oltre alcune decine di Ohm (inutili) ma offre il notevole vantaggio di costituire un partitore resistivo che non necessita di generatori di corrente costante, limita la tensione massima ai suoi capi, consente una scarica veloce quanto la carica ed offre una protezione migliore dei classici due diodi in antiparallelo.
 
 Un progetto completo (Hardware, Firmware e 3D) per la realizzazione di un **ESR Meter analogico ad alta precisione** ottimizzato per misure dirette *in-circuit* (senza dissaldare i condensatori). Lo strumento è capace di discriminare variazioni fino a **0.01 Ω** nella zona critica della scala, estendendo la lettura logaritmica fino a **20 Ω**.
 
@@ -85,6 +108,20 @@ L'architettura software è sviluppata in C++ per **ATtiny412** tramite Arduino I
 * **Oversampling e Filtraggio Avanzato:** Esegue un sovracampionamento hardware 64x combinato a un filtro software **EMA (Exponential Moving Average)** per garantire una lancetta perfettamente stabile e priva di vibrazioni.
 * **Scala Logaritmica in Virgola Fissa:** Approssimazione polinomiale rapida per mappare i valori di ESR sul microamperometro analogico, garantendo un'altissima risoluzione sotto l'ohm ed espandendo la leggibilità fino a 20 Ω.
 * **Gestione Power Intelligente (Kill-Switch):** Lo spegnimento totale tramite Latch MOSFET unito alla funzione di auto-spegnimento garantisce un azzeramento di consumi parassiti in standby di ~0 mA.
+
+### ⏳ Storia
+
+Il progetto nasce per risolvere un problema comune nell'hobby dell'elettronica: misurare con precisione l'ESR direttamente in-circuit senza dover dissaldare i componenti. L'obiettivo iniziale era sviluppare uno strumento economico, capace di raggiungere una sensibilità di 0.01 Ω senza l'uso di microcontrollori complessi.
+
+Ecco le tappe fondamentali dello sviluppo, durato alcuni mesi:
+
+* **1. Genesi e Simulazione:** Il concetto iniziale prevedeva amplificatori operazionali veloci e un raddrizzatore di precisione. Le simulazioni SPICE hanno confermato la fattibilità teorica, mostrando segnali in millivolt perfettamente discriminabili da un ADC a 10 bit (da 0.2 mV per 0.01 Ω a oltre 400 mV per 20 Ω).
+* **2. Il Problema dell'Induttanza (ESL):** Durante l'approfondimento delle simulazioni è emerso che la reattanza induttiva generava spike di tensione sui fronti dell'onda quadra a 100 kHz. Il problema è stato aggirato sostituendo il raddrizzatore classico con una tecnica di *Sample & Hold* ritardato, campionando il plateau pulito del segnale dopo i primi 3 µs di spike.
+* **3. Ottimizzazione Hardware e Compensazione Termica:** Per ridurre i costi, l'S&H esterno è stato integrato sfruttando l'ADC nativo della MCU, condizionando il segnale con soli due transistor BJT. Per contrastare la deriva termica sulle letture più basse, è stato introdotto un diodo di compensazione; il firmware esegue un controllo all'avvio e avvisa l'utente se l'offset supera la tolleranza (0.95V - 1.05V).
+* **4. Test Reali e Laboratorio:** Con l'arrivo dei PCB definitivi e l'adozione di puntali Kelvin autocostruiti, i test reali hanno confermato la capacità dell'ADC di discriminare variazioni fino a 3.33 mΩ, superando le aspettative iniziali.
+* **5. Sviluppo del Firmware (ATtiny412):** L'intero codice è stato ottimizzato per risiedere in una MCU ultra-economica da 50 centesimi. Sfruttando al massimo i timer e i registri dell'ADC per campionare entro 1-2 µs, il firmware occupa appena l'80% della memoria e gestisce una doppia scala intelligente (0.01 Ω - 1.00 Ω per la massima precisione e 1 Ω - 20 Ω per range esteso).
+
+
 
 ### 📐 Schema dei Collegamenti (Pinout ATtiny412)
 
