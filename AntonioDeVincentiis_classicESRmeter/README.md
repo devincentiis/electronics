@@ -9,8 +9,8 @@ In-Circuit ESR Meter standalone ATtiny412 platform.
 
 ## 🌍 Language / Lingua
 Select your preferred language:
-* [English Version](#-english-version)
-* [Versione Italiana](#-versione-italiana)
+* 🇬🇧 [English Version](#-english-version)
+* 🇮🇹 [Versione Italiana](#-versione-italiana)
 
 ---
 ![](85C1_1.jpg)
