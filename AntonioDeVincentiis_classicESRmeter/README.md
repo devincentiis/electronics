@@ -31,6 +31,8 @@ The software architecture is developed in C++ for the **ATtiny412** using the Ar
 * **Fixed-Point Logarithmic Scale:** Fast polynomial approximation maps ESR values onto the analog microammeter, ensuring extremely high sub-ohm resolution while expanding readability up to 20 Ω.
 * **Smart Power Management (Kill-Switch):** Total shutdown via a Latch MOSFET paired with an auto-power-off feature ensures ~0 mA parasitic current draw in standby.
 
+![Plot](./Plot_bjt_sensor.png)
+
 ### ⏳ History
 
 This project was born to solve a well-known issue in electronics troubleshooting: making precise, in-circuit ESR measurements without desoldering components. The initial goal was ambitious yet budget-friendly: creating a tool capable of 0.01 Ω sensitivity without relying on expensive and complex microcontrollers.
@@ -108,6 +110,8 @@ L'architettura software è sviluppata in C++ per **ATtiny412** tramite Arduino I
 * **Oversampling e Filtraggio Avanzato:** Esegue un sovracampionamento hardware 64x combinato a un filtro software **EMA (Exponential Moving Average)** per garantire una lancetta perfettamente stabile e priva di vibrazioni.
 * **Scala Logaritmica in Virgola Fissa:** Approssimazione polinomiale rapida per mappare i valori di ESR sul microamperometro analogico, garantendo un'altissima risoluzione sotto l'ohm ed espandendo la leggibilità fino a 20 Ω.
 * **Gestione Power Intelligente (Kill-Switch):** Lo spegnimento totale tramite Latch MOSFET unito alla funzione di auto-spegnimento garantisce un azzeramento di consumi parassiti in standby di ~0 mA.
+
+![Plot](./Plot_bjt_sensor.png)
 
 ### ⏳ Storia
 
